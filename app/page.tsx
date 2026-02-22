@@ -57,9 +57,7 @@ export default function Home() {
 
 
     try {
-      const res = await axios.get(
-  "https://developer-portfolio-backend-lhv5.onrender.com/analyze/" + username
-);
+     const res = await axios.get(`https://developer-portfolio-backend-lhv5.onrender.com/analyze/${username}?v=${Date.now()}`);
       setData(res.data);
     } catch (error) {
       console.error(error);
